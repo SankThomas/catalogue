@@ -46,6 +46,7 @@ export default async function BookFinderAndSearch() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {categories.results.map((category) => (
             <Link
+              key={category.list_name_encoded}
               href={`/projects/book-finder/books/${category.list_name_encoded}`}
             >
               <Card>
