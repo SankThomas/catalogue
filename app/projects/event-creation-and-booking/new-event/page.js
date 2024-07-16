@@ -54,9 +54,7 @@ export default function NewEvent() {
           organizer: eventOrganizer,
         };
 
-        const events = window?.localStorage.getItem("events")
-          ? JSON.parse(localStorage.getItem("events")) || []
-          : null;
+        const events = JSON.parse(localStorage.getItem("events")) || [];
         events.push(newEvent);
         localStorage.setItem("events", JSON.stringify(events));
 
