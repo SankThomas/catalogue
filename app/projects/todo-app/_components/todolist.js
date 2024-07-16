@@ -5,7 +5,9 @@ import React from "react";
 export default function TodoList({ editTodo, deleteTodo, items }) {
   return (
     <div>
-      <h3 className="mb-6">{items.length} items in your todo list</h3>
+      {items && (
+        <h3 className="mb-6">{items.length} items in your todo list</h3>
+      )}
 
       <div className="grid">
         {items.map((item) => (
