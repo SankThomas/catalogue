@@ -13,7 +13,7 @@ import React, { useState } from "react";
 import { projects } from "@/lib/projects";
 
 export default function Home() {
-  const [cards, setCards] = useState(projects);
+  const [cards] = useState(projects);
   const [filteredCards, setFilteredCards] = useState([]);
   const [text, setText] = useState("");
 
@@ -47,11 +47,7 @@ export default function Home() {
             YouTube channel.
           </p>
 
-          <Search
-            searchProjects={searchProjects}
-            text={text}
-            setText={setText}
-          />
+          <Search searchProjects={searchProjects} />
         </article>
 
         <article className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
