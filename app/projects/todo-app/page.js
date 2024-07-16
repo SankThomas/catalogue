@@ -3,9 +3,16 @@
 import Container from "@/components/container";
 import React, { useState, useEffect } from "react";
 import TodoForm from "./_components/todoform";
-import TodoList from "./_components/todolist";
 import { useToast } from "@/components/ui/use-toast";
 import { v4 as uuidv4 } from "uuid";
+import dynamic from "next/dynamic";
+
+const TodoList = dynamic(
+  () => {
+    return import("./_components/todolist");
+  },
+  { ssr: false },
+);
 
 function getLocalStorage() {
   if (typeof window !== "undefined") {

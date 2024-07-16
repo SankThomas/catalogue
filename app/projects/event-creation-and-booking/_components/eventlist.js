@@ -22,9 +22,7 @@ export default function EventList() {
     setEventList(events);
   }, []);
 
-  const bookedEvents = window?.localStorage.getItem("bookedEvents")
-    ? JSON.parse(localStorage.getItem("bookedEvents")) || []
-    : null;
+  const bookedEvents = JSON.parse(localStorage.getItem("bookedEvents")) || [];
 
   const handleBookEvent = (event) => {
     // Check if the event is already booked

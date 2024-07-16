@@ -3,7 +3,14 @@
 import Container from "@/components/container";
 import React from "react";
 import Navbar from "./_components/navbar";
-import EventList from "./_components/eventlist";
+import dynamic from "next/dynamic";
+
+const EventList = dynamic(
+  () => {
+    return import("./_components/eventlist");
+  },
+  { ssr: false },
+);
 
 export default function EventCreatingAndBooking() {
   return (
