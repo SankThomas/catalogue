@@ -11,7 +11,9 @@ export default function BookedEvents() {
   const [bookedEvents, setBookedEvents] = useState([]);
 
   useEffect(() => {
-    const events = JSON.parse(localStorage.getItem("bookedEvents") || "[]");
+    const events = window?.localStorage.getItem("bookedEvents")
+      ? JSON.parse(localStorage.getItem("bookedEvents") || "[]")
+      : null;
     setBookedEvents(events);
   }, []);
 

@@ -18,11 +18,15 @@ export default function EventList() {
   const { toast } = useToast();
 
   useEffect(() => {
-    const events = JSON.parse(localStorage.getItem("events") || "[]");
+    const events = window?.localStorage.getItem("events")
+      ? JSON.parse(localStorage.getItem("events") || "[]")
+      : null;
     setEventList(events);
   }, []);
 
-  const bookedEvents = JSON.parse(localStorage.getItem("bookedEvents")) || [];
+  const bookedEvents = window?.localStorage.getItem("bookedEvents")
+    ? JSON.parse(localStorage.getItem("bookedEvents")) || []
+    : null;
 
   const handleBookEvent = (event) => {
     // Check if the event is already booked
