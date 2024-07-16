@@ -8,16 +8,14 @@ import { useToast } from "@/components/ui/use-toast";
 import { v4 as uuidv4 } from "uuid";
 
 function getLocalStorage() {
-  let items = window?.localStorage.getItem("items")
-    ? localStorage.getItem("items")
-    : null;
+  if (typeof window !== "undefined") {
+    let items = localStorage.getItem("items");
 
-  if (items) {
-    return window?.localStorage.getItem("items")
-      ? JSON.parse(localStorage.getItem("items"))
-      : null;
-  } else {
-    return [];
+    if (items) {
+      return JSON.parse(localStorage.getItem("items"));
+    } else {
+      return [];
+    }
   }
 }
 
