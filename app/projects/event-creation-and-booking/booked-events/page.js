@@ -23,7 +23,7 @@ export default function BookedEvents() {
 
       <div className="py-20">
         <h1 className="mb-8 text-4xl lg:text-5xl">Booked Events</h1>
-        {bookedEvents.length === 0 ? (
+        {bookedEvents && bookedEvents.length === 0 ? (
           <CardDescription>
             No booked events found. Navigate to the{" "}
             <Link
