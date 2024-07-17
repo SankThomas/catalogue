@@ -1,7 +1,7 @@
 "use client";
 
 import Container from "@/components/container";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import TodoForm from "./_components/todoform";
 import { useToast } from "@/components/ui/use-toast";
 import { v4 as uuidv4 } from "uuid";
@@ -30,6 +30,8 @@ export default function Todo() {
   const [items, setItems] = useState(getLocalStorage());
   const [text, setText] = useState("");
   const [isEditing, setIsEditing] = useState(false);
+  const [modal, showModal] = useState(false);
+  const inputRef = useRef();
 
   const { toast } = useToast();
 
@@ -48,6 +50,7 @@ export default function Todo() {
       };
       setItems([newItem, ...items]);
       setText("");
+      setIsEditing(false);
       toast({
         title: "New Todo Added",
         description: "You have created a new Todo item",
@@ -59,6 +62,7 @@ export default function Todo() {
     const editingItem = items.find((item) => item.id === id);
     setItems(items.filter((item) => item.id !== id));
     setIsEditing(true);
+    inputRef.current.focus();
     setText(editingItem.title);
     toast({
       title: "Editing",
@@ -72,6 +76,7 @@ export default function Todo() {
       title: "Warning",
       description: "You have deleted an item",
     });
+    showModal(false);
   }
 
   useEffect(() => {
@@ -86,8 +91,20 @@ export default function Todo() {
       </div>
 
       <div className="mx-auto grid max-w-2xl gap-4 lg:gap-8">
-        <TodoForm createTodo={createTodo} text={text} setText={setText} />
-        <TodoList items={items} editTodo={editTodo} deleteTodo={deleteTodo} />
+        <TodoForm
+          isEditing={isEditing}
+          createTodo={createTodo}
+          text={text}
+          setText={setText}
+          inputRef={inputRef}
+        />
+        <TodoList
+          items={items}
+          editTodo={editTodo}
+          deleteTodo={deleteTodo}
+          modal={modal}
+          showModal={showModal}
+        />
       </div>
     </Container>
   );
