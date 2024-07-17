@@ -3,7 +3,13 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 
-export default function TodoForm({ createTodo, text, setText }) {
+export default function TodoForm({
+  inputRef,
+  isEditing,
+  createTodo,
+  text,
+  setText,
+}) {
   return (
     <>
       <form onSubmit={createTodo}>
@@ -21,10 +27,11 @@ export default function TodoForm({ createTodo, text, setText }) {
           value={text}
           onChange={(e) => setText(e.target.value)}
           className="input"
+          ref={inputRef}
         />
 
         <Button onClick={createTodo} className="mt-2">
-          + Add Item
+          {isEditing ? "Editing Item" : "+ Add Item"}
         </Button>
       </form>
     </>
