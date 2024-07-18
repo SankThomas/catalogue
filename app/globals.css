@@ -63,8 +63,15 @@
   * {
     @apply border-border;
   }
+}
+
+@layer components {
   body {
     @apply bg-black text-neutral-400;
+  }
+
+  h1 {
+    @apply mb-8 text-4xl lg:text-5xl;
   }
 
   h1,
@@ -86,5 +93,34 @@
 
   .input {
     @apply w-full rounded-lg border border-neutral-900 bg-transparent px-6 py-3 text-neutral-400 placeholder-neutral-600 outline-none transition focus:ring-4 focus:ring-neutral-800;
+  }
+
+  .markdown {
+    @apply space-y-4;
+  }
+
+  .markdown code,
+  .markdown pre {
+    @apply block rounded-lg bg-neutral-900 px-2 py-1;
+  }
+
+  .markdown a {
+    @apply text-white underline;
+  }
+
+  .markdown strong {
+    @apply font-bold;
+  }
+
+  .markdown em {
+    @apply font-bold italic;
+  }
+
+  .portable-text {
+    @apply space-y-6;
+  }
+
+  .portable-text p {
+    @apply text-base leading-6 text-neutral-400 lg:text-lg lg:leading-7;
   }
 }
