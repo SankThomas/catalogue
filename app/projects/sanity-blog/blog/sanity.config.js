@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'sankara_blog',
 
-  projectId: process.env.SANITY_PROJECT_ID,
+  projectId: '9bnraqna',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
