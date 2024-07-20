@@ -96,7 +96,31 @@
   }
 
   .markdown {
-    @apply space-y-4;
+    @apply space-y-6;
+  }
+
+  .markdown h1 {
+    @apply text-4xl;
+  }
+
+  .markdown h2 {
+    @apply border-b border-neutral-900 pb-6 text-3xl;
+  }
+
+  .markdown h3 {
+    @apply text-2xl;
+  }
+
+  .markdown h4 {
+    @apply text-xl;
+  }
+
+  .markdown h5 {
+    @apply text-lg;
+  }
+
+  .markdown h6 {
+    @apply text-base;
   }
 
   .markdown code,
@@ -106,6 +130,10 @@
 
   .markdown a {
     @apply text-white underline;
+  }
+
+  .markdown img {
+    @apply h-auto w-auto max-w-full rounded-lg;
   }
 
   .markdown strong {
@@ -120,7 +148,19 @@
     @apply space-y-6;
   }
 
+  .portable-text h2 {
+    @apply mt-8 text-2xl lg:text-3xl;
+  }
+
+  .portable-text h3 {
+    @apply mt-8 text-xl lg:text-2xl;
+  }
+
+  .portable-text h4 {
+    @apply mt-8 text-lg lg:text-xl;
+  }
+
   .portable-text p {
-    @apply text-base leading-6 text-neutral-400 lg:text-lg lg:leading-7;
+    @apply text-base leading-6 text-neutral-400 lg:text-lg lg:leading-8;
   }
 }
