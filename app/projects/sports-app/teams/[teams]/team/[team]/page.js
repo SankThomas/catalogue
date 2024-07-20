@@ -147,7 +147,7 @@ export default async function Team({ params }) {
                     width={400}
                     height={400}
                     alt={team.strTeam}
-                    className="rounded-lg"
+                    className="w-full rounded-lg md:w-[400px]"
                   />
                 ) : null}
                 {team.strFanart2 ? (
@@ -156,7 +156,7 @@ export default async function Team({ params }) {
                     width={400}
                     height={400}
                     alt={team.strTeam}
-                    className="rounded-lg"
+                    className="w-full rounded-lg md:w-[400px]"
                   />
                 ) : null}
                 {team.strFanart3 ? (
@@ -165,7 +165,7 @@ export default async function Team({ params }) {
                     width={400}
                     height={400}
                     alt={team.strTeam}
-                    className="rounded-lg"
+                    className="w-full rounded-lg md:w-[400px]"
                   />
                 ) : null}
                 {team.strFanart4 ? (
@@ -174,7 +174,7 @@ export default async function Team({ params }) {
                     width={400}
                     height={400}
                     alt={team.strTeam}
-                    className="rounded-lg"
+                    className="w-full rounded-lg md:w-[400px]"
                   />
                 ) : null}
                 {team.strBanner ? (
@@ -183,7 +183,7 @@ export default async function Team({ params }) {
                     width={400}
                     height={400}
                     alt={team.strTeam}
-                    className="rounded-lg"
+                    className="w-full rounded-lg md:w-[400px]"
                   />
                 ) : null}
               </div>
