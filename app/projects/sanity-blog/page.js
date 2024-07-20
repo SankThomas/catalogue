@@ -7,10 +7,10 @@ export default function SanityBlog() {
   return (
     <>
       <Container>
-        <div className="mb-8 text-center">
+        <div className="mb-4 text-center">
           <h1>Blog using Sanity CMS</h1>
           <CardDescription>
-            This project is built using{" "}
+            This project is built using NextJs and{" "}
             <a
               href="https://sanity.io"
               target="_blank"
