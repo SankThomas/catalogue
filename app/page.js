@@ -17,7 +17,7 @@ export default function Home() {
   const [filteredCards, setFilteredCards] = useState([]);
   const [text, setText] = useState("");
 
-  function searchProjects(title) {
+  function search(title) {
     setText(title);
 
     if (text) {
@@ -47,7 +47,7 @@ export default function Home() {
             YouTube channel.
           </p>
 
-          <Search searchProjects={searchProjects} />
+          <Search search={search} />
         </article>
 
         <article className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
