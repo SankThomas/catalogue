@@ -87,7 +87,7 @@ export default function PasswordGenerator() {
 
         <div className="mx-auto max-w-xl space-y-4 rounded-lg border border-neutral-900 p-6">
           {password && (
-            <div className="flex items-center justify-between rounded-lg border border-neutral-900 px-2 py-3">
+            <div className="flex items-center justify-between rounded-lg border border-neutral-900 bg-neutral-950 px-2 py-3">
               <h3 className="rounded-lg font-semibold text-neutral-200">
                 {password}
               </h3>
