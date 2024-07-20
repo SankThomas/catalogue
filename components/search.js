@@ -2,7 +2,7 @@
 
 import React from "react";
 
-export default function Search({ searchProjects }) {
+export default function Search({ search }) {
   return (
     <>
       <div>
@@ -10,10 +10,10 @@ export default function Search({ searchProjects }) {
           type="text"
           name="search"
           id="search"
-          placeholder="Search for a project"
+          placeholder="Type to search"
           autoComplete="off"
           className="input"
-          onChange={(e) => searchProjects(e.target.value)}
+          onChange={(e) => search(e.target.value)}
         />
       </div>
     </>
