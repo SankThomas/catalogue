@@ -21,7 +21,7 @@ export default function DogApp() {
   async function getDogs() {
     const headers = new Headers({
       "Content-Type": "application/json",
-      "x-api-key": process.env.NEXT_PUBLIC_DOG_APP_API_KEY,
+      "x-api-key": process.env.NEXT_DOG_APP_API_KEY,
     });
 
     const options = {
