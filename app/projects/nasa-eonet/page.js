@@ -1,10 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Container from "@/components/container";
 import Map from "./_components/map";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 export default function NasaEonet() {
   const [events, setEvents] = useState([]);
