@@ -77,11 +77,11 @@ export default function DogApp() {
         </div>
 
         <div className="lg:grid-cols- grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {text.length > 1
-            ? filteredDogs.map(({ breeds, url, width, height }) => {
-                const id = breeds.map((breed) => breed.id);
+          {text.length > 0 ? (
+            filteredDogs ? (
+              dogs.map((dog, { id, url, width, height }) => {
                 return (
-                  <Link href={`/projects/dog-app/dog/${id}`}>
+                  <Link href={`/projects/dog-app/dog/${id}`} key={id}>
                     <Card>
                       <CardHeader>
                         <Image
@@ -93,38 +93,45 @@ export default function DogApp() {
                         />
                       </CardHeader>
                       <CardContent>
-                        {breeds.map((breed) => (
-                          <CardTitle key={breed.id}>{breed.name}</CardTitle>
-                        ))}
+                        {dog.breeds &&
+                          dog.breeds.map((breed) => (
+                            <CardTitle key={breed.id}>{breed.name}</CardTitle>
+                          ))}
                       </CardContent>
                     </Card>
                   </Link>
                 );
               })
-            : dogs.map(({ breeds, url, width, height }) => {
-                const id = breeds.map((breed) => breed.id);
-
-                return (
-                  <Link href={`/projects/dog-app/dog/${id}`}>
-                    <Card>
-                      <CardHeader>
-                        <Image
-                          src={url}
-                          width={width}
-                          height={height}
-                          className="h-96 w-full rounded-lg object-cover"
-                          alt={id}
-                        />
-                      </CardHeader>
-                      <CardContent>
-                        {breeds.map((breed) => (
+            ) : (
+              <p>Fetching dog breeds</p>
+            )
+          ) : dogs ? (
+            dogs.map((dog, { id, url, width, height }) => {
+              return (
+                <Link href={`/projects/dog-app/dog/${id}`} key={id}>
+                  <Card>
+                    <CardHeader>
+                      <Image
+                        src={url}
+                        width={width}
+                        height={height}
+                        className="h-96 w-full rounded-lg object-cover"
+                        alt={id}
+                      />
+                    </CardHeader>
+                    <CardContent>
+                      {dog.breeds &&
+                        dog.breeds.map((breed) => (
                           <CardTitle key={breed.id}>{breed.name}</CardTitle>
                         ))}
-                      </CardContent>
-                    </Card>
-                  </Link>
-                );
-              })}
+                    </CardContent>
+                  </Card>
+                </Link>
+              );
+            })
+          ) : (
+            <p>Fetching dog breeds</p>
+          )}
         </div>
       </Container>
     </>
