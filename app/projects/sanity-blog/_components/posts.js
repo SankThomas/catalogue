@@ -98,7 +98,7 @@ export default function Posts() {
                         src={post.mainImage.asset.url}
                         width={800}
                         height={600}
-                        alt={post.mainImage.alt}
+                        alt={post.slug.current}
                         className="aspect-auto h-auto w-full object-contain object-center lg:h-96"
                       />
                     ) : (
@@ -141,7 +141,7 @@ export default function Posts() {
                         src={post.mainImage.asset.url}
                         width={800}
                         height={600}
-                        alt={post.mainImage.alt}
+                        alt={post.slug.current}
                         className="aspect-auto h-auto w-full object-contain object-center lg:h-96"
                       />
                     ) : (
