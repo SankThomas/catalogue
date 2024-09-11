@@ -2,13 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/container";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default async function Category({ params }) {
   const slug = params.category;

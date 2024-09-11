@@ -34,6 +34,7 @@ export default async function FoodPalace() {
                 <a
                   href="https://themealdb.com"
                   target="_blank"
+                  rel="noreferrer"
                   className="text-neutral-200 underline"
                 >
                   TheMealDB API
