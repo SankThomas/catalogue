@@ -52,7 +52,7 @@ export default async function Teams({ params }) {
                       width={400}
                       height={400}
                       alt={team.strTeam}
-                      className="mx-auto block h-32 w-32 md:h-[400px] md:w-[400px]"
+                      className="mx-auto block"
                     />
                   ) : (
                     <CardDescription>No team badge</CardDescription>
