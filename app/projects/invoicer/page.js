@@ -53,7 +53,7 @@ export default function Invoicer() {
     }
 
     if (values.email) {
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email);
+      return !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email);
     } else {
       errors.email = "Please enter a valid email address";
     }
@@ -79,7 +79,9 @@ export default function Invoicer() {
     }
 
     if (values.clientEmail) {
-      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.clientEmail);
+      return !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(
+        values.clientEmail,
+      );
     } else {
       errors.clientEmail = "Please enter a valid email address";
     }
