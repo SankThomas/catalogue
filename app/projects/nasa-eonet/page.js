@@ -2,7 +2,14 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
-import Map from "./_components/map";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(
+  () => {
+    return import("./_components/map");
+  },
+  { ssr: false },
+);
 
 export default function NasaEonet() {
   const [events, setEvents] = useState([]);
