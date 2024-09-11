@@ -7,7 +7,7 @@ import { Facebook, ReplyIcon, XIcon } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function page() {
+export default function ResponsiveArticlePreview() {
   const [showShare, setShowShare] = useState(false);
 
   return (

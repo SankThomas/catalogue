@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
-export default function page() {
+export default function ComingSoonLandingPage() {
   return (
     <div className="bg-[#FFF9F9] p-4 lg:p-0">
       <Container />

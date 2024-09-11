@@ -6,7 +6,7 @@ import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-export default function page() {
+export default function Pokedex() {
   const [pokemon, setPokemon] = useState();
   const [filteredCards, setFilteredCards] = useState([]);
   const [text, setText] = useState("");
