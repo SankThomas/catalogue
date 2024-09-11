@@ -1,3 +1,4 @@
+import React from "react";
 import { Josefin_Sans } from "next/font/google";
 
 const josefinsans = Josefin_Sans({
