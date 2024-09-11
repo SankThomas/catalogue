@@ -6,7 +6,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Chart from "../_components/chart";
 
-export default async function SinglePokemon({ params }) {
+export default function SinglePokemon({ params }) {
   const [details, setDetails] = useState();
 
   async function getPokemonDetails() {
