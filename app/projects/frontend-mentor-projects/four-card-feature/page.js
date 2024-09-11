@@ -46,8 +46,9 @@ export default function FourCardFeature() {
             </p>
 
             <div className="mt-16 flex flex-wrap items-center justify-center gap-8">
-              {data.map((item) => (
+              {data.map((item, index) => (
                 <article
+                  key={index}
                   className={`${item.borderColor} third:translate-y-1/2 max-w-xs transform space-y-4 rounded-lg border-t-[8px] bg-white p-6 shadow lg:[&:nth-last-child(2n)]:translate-y-1/2`}
                 >
                   <h2 className="text-xl text-neutral-900">{item.title}</h2>
