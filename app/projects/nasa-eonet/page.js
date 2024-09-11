@@ -4,6 +4,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 
+// NOTE for future references:
+// Dynamic imports fix `window is not defined` when deploying to Vercel or Netlify
 const Map = dynamic(
   () => {
     return import("./_components/map");
