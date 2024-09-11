@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Container from "@/components/fmcontainer";
 import { Button } from "@/components/ui/button";
 import { InstagramLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
