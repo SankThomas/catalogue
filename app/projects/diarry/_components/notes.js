@@ -10,7 +10,7 @@ import { Pencil, Trash } from "lucide-react";
 import React from "react";
 import { Remarkable } from "remarkable";
 import DeleteModal from "./deletemodal";
-import NotePreview from "./notepreview";
+// import NotePreview from "./notepreview";
 
 const md = new Remarkable();
 
@@ -20,8 +20,8 @@ export default function Notes({
   handleEdit,
   showModal,
   setShowModal,
-  showPreview,
-  setShowPreview,
+  // showPreview,
+  // setShowPreview,
 }) {
   return (
     <>
