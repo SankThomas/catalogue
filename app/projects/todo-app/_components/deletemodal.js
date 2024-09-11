@@ -2,7 +2,6 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { CardDescription, CardTitle } from "@/components/ui/card";
 import { XIcon } from "lucide-react";
-import React from "react";
 
 export default function DeleteModal({ item, deleteTodo, showModal }) {
   return (
