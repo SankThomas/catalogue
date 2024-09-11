@@ -89,7 +89,7 @@ export default function User() {
                 </CardContent>
               </Card>
             ))}
-            <div className="mt-8 text-center" variant="secondary">
+            <div className="mt-8 text-center">
               <Button variant="secondary" onClick={getUser}>
                 Get another random profile
               </Button>
