@@ -1,6 +1,6 @@
 import Container from "@/components/container";
 import { Button } from "@/components/ui/button";
-import { Card, CardDescription, CardHeader } from "@/components/ui/card";
+import { CardDescription } from "@/components/ui/card";
 import {
   GlobeIcon,
   InstagramLogoIcon,
