@@ -2,6 +2,7 @@
   "extends": ["next/core-web-vitals", "@sanity/eslint-config-studio"],
   "rules": {
     "react/no-unescaped-entities": "off",
-    "react-hooks/exhaustive-deps": "off"
+    "react-hooks/exhaustive-deps": "off",
+    "react/prop-types": "off"
   }
 }
