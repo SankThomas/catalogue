@@ -163,4 +163,8 @@
   .portable-text p {
     @apply text-base leading-6 text-neutral-400 lg:text-lg lg:leading-8;
   }
+
+  img {
+    @apply max-w-full;
+  }
 }
