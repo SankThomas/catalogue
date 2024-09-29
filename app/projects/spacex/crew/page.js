@@ -24,7 +24,7 @@ export default async function Crew() {
         <div className="mx-auto max-w-7xl space-y-6">
           <h1 className="text-center">The Crew</h1>
 
-          <div className="grid gap-8">
+          <div className="grid gap-8 md:grid-cols-2">
             {crew.map((mem) => (
               <Card
                 key={mem.id}
@@ -35,7 +35,7 @@ export default async function Crew() {
                   width={1920}
                   height={1080}
                   alt={mem.name}
-                  className="rounded-lg"
+                  className="h-full w-full rounded-lg object-cover"
                 />
 
                 <CardContent>
