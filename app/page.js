@@ -60,7 +60,9 @@ export default function Home() {
                       <CardTitle>{project.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription>{project.description}</CardDescription>
+                      <CardDescription className="leading-6">
+                        {project.description}
+                      </CardDescription>
                       <CardDescription className="mt-2 inline-flex rounded-full bg-neutral-900 px-4 py-2 text-xs transition hover:bg-neutral-800">
                         {project.category}
                       </CardDescription>
@@ -76,7 +78,9 @@ export default function Home() {
                       <CardTitle>{project.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription>{project.description}</CardDescription>
+                      <CardDescription className="leading-6">
+                        {project.description}
+                      </CardDescription>
                       <CardDescription className="mt-2 inline-flex rounded-full bg-neutral-900 px-4 py-2 text-xs transition hover:bg-neutral-800">
                         {project.category}
                       </CardDescription>
