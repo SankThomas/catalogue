@@ -9,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { useToast } from "@/components/ui/use-toast";
 import { format } from "date-fns";
 import { FolderIcon, GlobeIcon, StarIcon } from "lucide-react";
 import Image from "next/image";
@@ -18,7 +17,6 @@ import React, { useState, useEffect } from "react";
 export default function GithubUsersWithAuth() {
   const [repos, setRepos] = useState([]);
   const [username, setUsername] = useState("sankthomas");
-  const { toast } = useToast();
 
   async function getRepos() {
     try {
