@@ -54,8 +54,8 @@ export default function GithubUsersWithAuth() {
           >
             GitHub Users API
           </a>{" "}
-          to get profile and repository data. Use sparingly as this API is not
-          free.
+          to get profile and repository data. It shows the 50 most recently
+          updated repositories. Use sparingly as this API is not free.
         </p>
       </div>
 
