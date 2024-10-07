@@ -79,17 +79,18 @@ export default function DogApp() {
         <div className="lg:grid-cols- grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {text.length > 0 ? (
             filteredDogs ? (
-              dogs.map((dog, { id, url, width, height }) => {
+              dogs.map((dog) => {
                 return (
-                  <Link href={`/projects/dog-app/dog/${id}`} key={id}>
+                  <Link href={`/projects/dog-app/dog/${dog.id}`} key={dog.id}>
                     <Card>
                       <CardHeader>
                         <Image
-                          src={url}
-                          width={width}
-                          height={height}
+                          src={dog.url}
+                          width={dog.width}
+                          height={dog.height}
                           className="h-96 w-full rounded-lg object-cover"
-                          alt={id}
+                          alt={dog.id}
+                          priority
                         />
                       </CardHeader>
                       <CardContent>
@@ -103,20 +104,23 @@ export default function DogApp() {
                 );
               })
             ) : (
-              <p>Fetching dog breeds</p>
+              <p className="text-center text-sm leading-6 text-neutral-600">
+                Fetching dog breeds
+              </p>
             )
           ) : dogs ? (
-            dogs.map((dog, { id, url, width, height }) => {
+            dogs.map((dog) => {
               return (
-                <Link href={`/projects/dog-app/dog/${id}`} key={id}>
+                <Link href={`/projects/dog-app/dog/${dog.id}`} key={dog.id}>
                   <Card>
                     <CardHeader>
                       <Image
-                        src={url}
-                        width={width}
-                        height={height}
+                        src={dog.url}
+                        width={dog.width}
+                        height={dog.height}
                         className="h-96 w-full rounded-lg object-cover"
-                        alt={id}
+                        alt={dog.id}
+                        priority
                       />
                     </CardHeader>
                     <CardContent>
@@ -130,7 +134,9 @@ export default function DogApp() {
               );
             })
           ) : (
-            <p>Fetching dog breeds</p>
+            <p className="text-center text-sm leading-6 text-neutral-600">
+              Fetching dog breeds
+            </p>
           )}
         </div>
       </Container>
